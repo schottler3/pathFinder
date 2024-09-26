@@ -1,0 +1,18 @@
+# Binaries
+bin/
+
+# Python cache
+__pycache__/
+
+# Log files
+*.log
+
+# Virtual environment configuration
+pyvenv.cfg
+
+# Libraries
+lib/
+lib64/
+
+# Local Only
+images/
