@@ -1,27 +1,54 @@
-from flask import Flask, send_file, render_template, abort
+from flask import Flask, send_file, render_template, abort, request, jsonify
 import os
+from structures import *
+from search import Search
 
 app = Flask(__name__)
 
-max_id = 10000
+size = 16
 
-@app.route("/image/<int:id>", methods=['GET'])
-def getImage(id):
-    if not isinstance(id,int) or id < 0 or id > max_id:
-        abort(404, description="Image not found")
+search = Search()
 
-    log = open("traffic.log", "a")
-    ip = request.remote_addr
+@app.route('/')
+def index():
+    return render_template('index.html')
 
-    log.write(f"{ip} requested for image {id}\n")
-    log.close()
+@app.route('/search/<algorithm>', methods=['POST'])
+def search_algorithm(algorithm):
+    graph = Graph(size)
+    data = request.get_json()
+    start = data.get('start')
+    print(start)
+    graph.setStart(int(start.split('-')[0]), int(start.split('-')[1]))
 
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    image_path = os.path.join(script_dir, 'images', f'{id}.jpg')
-    if os.path.exists(image_path):
-        return send_file(image_path, mimetype='image/jpg')
+    goals = data.get('goals')
+    print(goals)
+    for goal in goals:
+        x, y = goal.split('-')
+        graph.addGoal(int(x), int(y))
+
+    blocks = data.get('walls')
+    print(blocks)
+    for block in blocks:
+        x, y = block.split('-')
+        graph.setOpen(int(x), int(y), False)
+        print(f"Block: {x}, {y}")
+
+    if algorithm == 'BFS':
+        node, steps = search.BFS(graph)
+    elif algorithm == 'DFS':
+        node, steps = search.DFS(graph)
+    elif algorithm == 'BestFS':
+        node, steps = search.BestFS(graph)
+    elif algorithm == 'A':
+        node, steps = search.A(graph)
     else:
-        abort(404, description="Image not found")
+        return jsonify({'status': 'failure', 'message': 'Unknown algorithm'}), 400
+
+    if node is None:
+        return jsonify({'status': 'failure', 'steps': steps})
+    else:
+        return jsonify({'status': 'success', 'steps': steps})
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=1471)

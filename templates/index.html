@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>pathFinder</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+  </head>
+  <body class="pure-g">
+    <div class="pure-u-1-4" id="setup">
+      <div id="options">
+        <button type="button" class="pure-button" onclick="setAlgorithm('BFS')">BFS</button>
+        <button type="button" class="pure-button" onclick="setAlgorithm('DFS')">DFS</button>
+        <button type="button" class="pure-button" onclick="setAlgorithm('BestFS')">BestFS</button>
+        <button type="button" class="pure-button" onclick="setAlgorithm('A')">A*</button>
+      </div>
+      <button type="button" class="pure-button" id="start" onclick="search()">Start</button>
+    </div>
+    <div class="pure-u-2-3" id="grid">
+
+    </div>  
+  </body>
+
+  <script src="{{ url_for('static', filename='index.js') }}"></script>
+  
+  </body>
+</html>
