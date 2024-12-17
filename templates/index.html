@@ -14,8 +14,13 @@
         <button type="button" class="pure-button" onclick="setAlgorithm('A')">A*</button>
         <button type="button" class="pure-button" onclick="setAlgorithm('Dijkstra')">Dijkstra</button>
       </div>
+      <div class="pure-u-1-1" id="heuristic">
+        <button type="button" class="pure-button" onclick="setAlgorithm('BestFSEuclidean')">BestFSEuclidean</button>
+        <button type="button" class="pure-button" onclick="setAlgorithm('AEuclidean')">A*Euclidean</button>
+      </div>
       <button type="button" class="pure-button" id="setGrid" onclick="setGrid()">Set Grid</button>
       <button type="button" class="pure-button" id="start" onclick="search()">Start</button>
+      <button type="button" class="pure-button" id="run" onclick="runTest()">Run Test</button>
     </div>
     <div class="pure-u-2-3" id="grid">
 

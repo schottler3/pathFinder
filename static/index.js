@@ -143,6 +143,12 @@ let search = function() {
         case 'Dijkstra':
             searchFetch('Dijkstra');
             break;
+        case 'BestFSEuclidean':
+            searchFetch('BestFSEuclidean');
+            break;
+        case 'AEuclidean':
+            searchFetch('AEuclidean');
+            break;
     }
 }
 
@@ -175,6 +181,18 @@ let searchFetch = async function(algorithm) {
         editing = true;
     }
 }
+
+let runTest = async function() {
+    response = await fetch(`/run`, {
+        method: 'POST',
+    })
+
+    if(response.ok){
+        let data = await response.json();
+        console.log(data);
+    }
+}
+
 
 let setGrid = async function() {
     clearGrid();

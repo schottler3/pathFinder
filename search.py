@@ -79,9 +79,9 @@ class Search:
         return None, steps, []
 
     ## https://www.geeksforgeeks.org/best-first-search-informed-search/
-    def BestFS(self, graph):
+    def BestFS(self, graph, algorithm='manhattan'):
         pq = queue.PriorityQueue()
-        pq.put((graph.manhattan(graph.start), graph.start))
+        pq.put((getattr(graph,algorithm)(graph.start), graph.start))
         steps = []
         steps.append({'node': f"{graph.start.x}-{graph.start.y}", 'status': 'start'})
         reached = set()
@@ -97,50 +97,52 @@ class Search:
                     if v not in reached:
                         reached.add(v)
                         v.parent = u
-                        pq.put((graph.manhattan(v), v))
+                        pq.put((getattr(graph,algorithm)(v), v))
                         steps.append({'node': f"{v.x}-{v.y}", 'status': 'visited'})
                 u.visited = True
         return None, steps, []
     
     ## https://www.geeksforgeeks.org/a-search-algorithm/
-    def A(self, graph):
+    def A(self, graph, algorithm='manhattan'):
+        # Initialize all nodes
+        for row in graph.nodes:
+            for node in row:
+                node.g = float('inf')
+                node.h = 0
+                node.f = float('inf')
+        
         graph.start.g = 0
-        graph.start.h = graph.manhattan(graph.start)
+        graph.start.h = float(getattr(graph, algorithm)(graph.start))  # Convert to float
         graph.start.f = graph.start.g + graph.start.h
 
         open = queue.PriorityQueue()
-        open.put((graph.start.f, graph.start))
+        # Add node ID as tiebreaker
+        open.put((graph.start.f, id(graph.start), graph.start))
         closed = set()
         steps = []
         steps.append({'node': f"{graph.start.x}-{graph.start.y}", 'status': 'start'})
         
         while not open.empty():
-            _, q = open.get()
-            
-            if q in closed:
-                continue
-            
-            closed.add(q)
-            
+            _, _, q = open.get()
+            # ...existing code...
             for child in graph.expand(q):
                 if child in closed:
                     continue
                 
-                tentative_g = q.g + 1
+                tentative_g = float(q.g + 1)  # Convert to float
                 if tentative_g < child.g:
                     child.parent = q
                     child.g = tentative_g
-                    child.h = graph.manhattan(child)
+                    child.h = float(getattr(graph, algorithm)(child))  # Convert to float
                     child.f = child.g + child.h
                     
                     if graph.isGoal(child):
                         steps.append({'node': f"{child.x}-{child.y}", 'status': 'goal'})
                         return child, steps, self.construct_path(child)
                     
-                    if not any(node for node in open.queue if node[1].x == child.x and node[1].y == child.y and node[1].f <= child.f):
-                        open.put((child.f, child))
-                        steps.append({'node': f"{child.x}-{child.y}", 'status': 'visited'})
-
+                    open.put((child.f, id(child), child))
+                    steps.append({'node': f"{child.x}-{child.y}", 'status': 'visited'})
+        
         return None, steps, []
 
     def Dijkstra(self, graph):

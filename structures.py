@@ -1,3 +1,7 @@
+from cmath import sqrt
+import random
+
+
 class Node:
     def __init__(self, x, y, open):
         self.x = x
@@ -48,14 +52,16 @@ class Graph:
         x = node.x
         y = node.y
         nodes = self.nodes
-        if y + 1 < self.size and nodes[x][y + 1].open:
-            actions.append(nodes[x][y + 1])
-        if x + 1 < self.size and nodes[x + 1][y].open:
-            actions.append(nodes[x + 1][y])
-        if y - 1 >= 0 and nodes[x][y - 1].open:
-            actions.append(nodes[x][y - 1])
-        if x - 1 >= 0 and nodes[x - 1][y].open:
-            actions.append(nodes[x - 1][y])
+        
+        options = [(x, y + 1), (x + 1, y), (x, y - 1), (x - 1, y)]
+        random.shuffle(options)
+
+        while len(options) > 0:
+            x, y = options.pop()
+            if x < 0 or y < 0 or x >= self.size or y >= self.size:
+                continue
+            if nodes[x][y].open:
+                actions.append(nodes[x][y])
         return actions
     
     def mazeExpand(self, node):
@@ -77,9 +83,13 @@ class Graph:
     def isGoal(self, node):
         return node in self.goals
     
+    
     def manhattan(self, node):
         return min(abs(node.x - goal.x) + abs(node.y - goal.y) for goal in self.goals)
     
+    def euclidean(self, node):
+        return min(((node.x - goal.x)**2 + (node.y - goal.y)**2)**0.5 for goal in self.goals)  
+
     def cost(self, node1, node2):
         return 1
     

@@ -1,0 +1,701 @@
+Algorithm,Time,Steps,Length
+BFS,1.23,48,21
+DFS,4.55,178,21
+BestFS,0.44,52,21
+A,0.49,43,21
+Dijkstra,2.9,99,21
+BestFS Euclidean,0.74,53,21
+A Euclidean,0.04,1,0
+BFS,1.94,59,34
+DFS,1.48,47,34
+BestFS,0.94,53,34
+A,0.74,59,34
+Dijkstra,3.67,117,34
+BestFS Euclidean,0.42,49,34
+A Euclidean,0.02,1,0
+BFS,1.9,74,33
+DFS,2.8,122,33
+BestFS,0.8,46,33
+A,0.5,53,33
+Dijkstra,4.46,150,33
+BestFS Euclidean,0.58,46,33
+A Euclidean,0.02,1,0
+BFS,1.01,58,19
+DFS,2.19,88,19
+BestFS,0.36,22,19
+A,0.32,21,19
+Dijkstra,3.35,124,19
+BestFS Euclidean,0.29,22,19
+A Euclidean,0.01,1,0
+BFS,4.48,178,102
+DFS,3.38,134,102
+BestFS,1.64,118,102
+A,2.14,174,102
+Dijkstra,10.28,355,102
+BestFS Euclidean,1.57,132,102
+A Euclidean,0.02,1,0
+BFS,4.14,151,64
+DFS,3.47,119,64
+BestFS,1.2,121,64
+A,1.21,129,64
+Dijkstra,8.55,302,64
+BestFS Euclidean,1.55,118,64
+A Euclidean,0.02,1,0
+BFS,4.15,149,84
+DFS,2.67,97,84
+BestFS,1.41,128,84
+A,1.77,127,84
+Dijkstra,8.28,296,84
+BestFS Euclidean,1.74,179,84
+A Euclidean,0.03,1,0
+BFS,3.42,121,66
+DFS,2.51,78,66
+BestFS,1.04,104,66
+A,0.96,110,66
+Dijkstra,6.97,241,66
+BestFS Euclidean,1.22,104,66
+A Euclidean,0.03,1,0
+BFS,3.66,109,91
+DFS,3.49,95,91
+BestFS,1.62,96,91
+A,1.29,96,91
+Dijkstra,7.22,215,91
+BestFS Euclidean,1.44,96,91
+A Euclidean,0.02,1,0
+BFS,3.15,122,44
+DFS,1.01,54,44
+BestFS,0.79,56,44
+A,0.9,86,44
+Dijkstra,6.63,243,44
+BestFS Euclidean,0.86,54,44
+A Euclidean,0.02,1,0
+BFS,3.64,129,97
+DFS,4.01,128,97
+BestFS,1.7,129,97
+A,1.97,124,97
+Dijkstra,7.93,257,97
+BestFS Euclidean,1.58,129,97
+A Euclidean,0.02,1,0
+BFS,0.52,16,8
+DFS,0.36,13,8
+BestFS,0.21,11,8
+A,0.12,11,8
+Dijkstra,1.04,33,8
+BestFS Euclidean,0.17,11,8
+A Euclidean,0.01,1,0
+BFS,3.79,170,96
+DFS,5.09,168,96
+BestFS,2.09,165,96
+A,2.1,169,96
+Dijkstra,9.93,340,96
+BestFS Euclidean,1.81,169,96
+A Euclidean,0.04,1,0
+BFS,4.02,145,72
+DFS,4.59,124,72
+BestFS,1.53,116,72
+A,2.49,138,72
+Dijkstra,12.47,289,72
+BestFS Euclidean,1.33,111,72
+A Euclidean,0.02,1,0
+BFS,0.67,20,19
+DFS,0.61,20,19
+BestFS,0.42,21,19
+A,0.55,20,19
+Dijkstra,1.35,39,19
+BestFS Euclidean,0.38,21,19
+A Euclidean,0.02,1,0
+BFS,5.17,146,64
+DFS,2.99,73,64
+BestFS,1.75,118,64
+A,1.46,118,64
+Dijkstra,10.26,291,64
+BestFS Euclidean,1.77,134,64
+A Euclidean,0.03,1,0
+BFS,0.8,31,12
+DFS,0.47,14,12
+BestFS,0.17,15,12
+A,0.23,14,12
+Dijkstra,1.88,58,12
+BestFS Euclidean,0.3,18,12
+A Euclidean,0.03,1,0
+BFS,3.49,135,43
+DFS,2.48,120,43
+BestFS,1.17,63,43
+A,1.29,115,43
+Dijkstra,11.24,271,43
+BestFS Euclidean,1.09,64,43
+A Euclidean,0.04,1,0
+BFS,3.56,135,40
+DFS,1.3,43,40
+BestFS,0.54,44,40
+A,1.24,103,40
+Dijkstra,8.26,268,40
+BestFS Euclidean,0.84,44,40
+A Euclidean,0.02,1,0
+BFS,5.09,173,73
+DFS,3.61,99,73
+BestFS,1.42,101,73
+A,2.03,132,73
+Dijkstra,9.53,344,73
+BestFS Euclidean,1.24,101,73
+A Euclidean,0.02,1,0
+BFS,3.65,142,74
+DFS,4.57,178,74
+BestFS,1.52,178,74
+A,1.75,132,74
+Dijkstra,7.93,286,74
+BestFS Euclidean,1.42,178,74
+A Euclidean,0.03,1,0
+BFS,1.39,63,25
+DFS,1.98,89,25
+BestFS,0.32,35,25
+A,0.3,40,25
+Dijkstra,3.8,129,25
+BestFS Euclidean,0.33,35,25
+A Euclidean,0.02,1,0
+BFS,2.13,89,51
+DFS,1.75,60,51
+BestFS,0.78,82,51
+A,0.79,82,51
+Dijkstra,5.18,176,51
+BestFS Euclidean,0.47,82,51
+A Euclidean,0.02,1,0
+BFS,0.33,10,6
+DFS,1.44,63,6
+BestFS,0.19,10,6
+A,0.14,8,6
+Dijkstra,0.71,20,6
+BestFS Euclidean,0.11,9,6
+A Euclidean,0.01,1,0
+BFS,3.85,147,60
+DFS,2.33,71,60
+BestFS,0.83,76,60
+A,1.23,124,60
+Dijkstra,8.04,294,60
+BestFS Euclidean,0.78,78,60
+A Euclidean,0.02,1,0
+BFS,3.76,158,105
+DFS,4.37,152,105
+BestFS,1.38,128,105
+A,1.84,157,105
+Dijkstra,9.11,315,105
+BestFS Euclidean,1.71,128,105
+A Euclidean,0.04,1,0
+BFS,0.33,11,10
+DFS,0.29,11,10
+BestFS,0.17,12,10
+A,0.2,11,10
+Dijkstra,0.71,21,10
+BestFS Euclidean,0.15,12,10
+A Euclidean,0.01,1,0
+BFS,2.71,97,70
+DFS,2.58,79,70
+BestFS,1.05,95,70
+A,1.5,95,70
+Dijkstra,5.84,193,70
+BestFS Euclidean,1.22,95,70
+A Euclidean,0.02,1,0
+BFS,1.22,42,32
+DFS,0.97,41,32
+BestFS,0.6,40,32
+A,0.55,39,32
+Dijkstra,2.7,83,32
+BestFS Euclidean,0.49,40,32
+A Euclidean,0.02,1,0
+BFS,0.45,29,15
+DFS,0.53,17,15
+BestFS,0.2,18,15
+A,0.36,19,15
+Dijkstra,1.9,58,15
+BestFS Euclidean,0.19,18,15
+A Euclidean,0.02,1,0
+BFS,3.78,152,51
+DFS,2.44,73,51
+BestFS,1.08,134,51
+A,1.14,116,51
+Dijkstra,8.74,307,51
+BestFS Euclidean,0.93,134,51
+A Euclidean,0.02,1,0
+BFS,0.93,45,17
+DFS,4.39,190,17
+BestFS,0.26,23,17
+A,0.45,24,17
+Dijkstra,2.83,90,17
+BestFS Euclidean,0.41,23,17
+A Euclidean,0.02,1,0
+BFS,2.89,107,48
+DFS,2.74,102,48
+BestFS,1.1,103,48
+A,0.98,102,48
+Dijkstra,6.66,212,48
+BestFS Euclidean,1.19,103,48
+A Euclidean,0.02,1,0
+BFS,2.21,83,36
+DFS,2.01,75,36
+BestFS,0.58,39,36
+A,0.91,74,36
+Dijkstra,5.54,167,36
+BestFS Euclidean,0.57,39,36
+A Euclidean,0.03,1,0
+BFS,1.59,63,21
+DFS,0.94,35,21
+BestFS,0.39,37,21
+A,0.48,37,21
+Dijkstra,3.46,122,21
+BestFS Euclidean,0.6,36,21
+A Euclidean,0.03,1,0
+BFS,5.6,185,85
+DFS,4.59,168,85
+BestFS,1.47,116,85
+A,1.98,178,85
+Dijkstra,11.04,368,85
+BestFS Euclidean,1.3,118,85
+A Euclidean,0.02,1,0
+BFS,0.64,26,10
+DFS,0.74,22,10
+BestFS,0.21,13,10
+A,0.14,14,10
+Dijkstra,1.64,50,10
+BestFS Euclidean,0.29,13,10
+A Euclidean,0.02,1,0
+BFS,1.95,68,40
+DFS,1.37,46,40
+BestFS,0.73,69,40
+A,0.6,68,40
+Dijkstra,4.59,135,40
+BestFS Euclidean,0.72,69,40
+A Euclidean,0.02,1,0
+BFS,2.41,71,52
+DFS,2.16,62,52
+BestFS,1.2,68,52
+A,1.35,71,52
+Dijkstra,9.37,141,52
+BestFS Euclidean,0.83,68,52
+A Euclidean,0.04,1,0
+BFS,5.23,196,136
+DFS,2.9,165,136
+BestFS,2.74,196,136
+A,3.01,196,136
+Dijkstra,18.32,391,136
+BestFS Euclidean,2.2,196,136
+A Euclidean,0.03,1,0
+BFS,2.74,138,53
+DFS,2.56,56,53
+BestFS,1.31,127,53
+A,1.65,118,53
+Dijkstra,10.98,275,53
+BestFS Euclidean,1.1,125,53
+A Euclidean,0.05,1,0
+BFS,0.17,6,3
+DFS,3.07,172,3
+BestFS,0.21,6,3
+A,0.11,5,3
+Dijkstra,0.48,13,3
+BestFS Euclidean,0.08,6,3
+A Euclidean,0.03,1,0
+BFS,3.85,150,53
+DFS,4.93,186,53
+BestFS,1.05,63,53
+A,1.28,138,53
+Dijkstra,8.89,303,53
+BestFS Euclidean,1.35,63,53
+A Euclidean,0.03,1,0
+BFS,1.48,47,18
+DFS,0.95,36,18
+BestFS,0.36,28,18
+A,0.45,30,18
+Dijkstra,3.67,94,18
+BestFS Euclidean,0.54,28,18
+A Euclidean,0.02,1,0
+BFS,1.15,42,16
+DFS,1.03,25,16
+BestFS,0.29,21,16
+A,0.41,22,16
+Dijkstra,2.93,85,16
+BestFS Euclidean,0.36,21,16
+A Euclidean,0.02,1,0
+BFS,0.4,14,8
+DFS,4.85,198,8
+BestFS,0.24,11,8
+A,0.19,10,8
+Dijkstra,1.35,30,8
+BestFS Euclidean,0.23,10,8
+A Euclidean,0.03,1,0
+BFS,1.12,33,11
+DFS,0.29,13,11
+BestFS,0.3,14,11
+A,0.37,15,11
+Dijkstra,1.88,63,11
+BestFS Euclidean,0.21,14,11
+A Euclidean,0.03,1,0
+BFS,1.79,47,17
+DFS,0.57,22,17
+BestFS,0.4,22,17
+A,0.44,27,17
+Dijkstra,2.79,92,17
+BestFS Euclidean,0.48,22,17
+A Euclidean,0.03,1,0
+BFS,2.92,104,46
+DFS,5.25,178,46
+BestFS,1.0,104,46
+A,0.95,82,46
+Dijkstra,6.62,216,46
+BestFS Euclidean,1.09,108,46
+A Euclidean,0.04,1,0
+BFS,0.25,8,4
+DFS,0.16,5,4
+BestFS,0.1,7,4
+A,0.13,5,4
+Dijkstra,0.47,16,4
+BestFS Euclidean,0.11,7,4
+A Euclidean,0.03,1,0
+BFS,5.5,196,76
+DFS,4.43,169,76
+BestFS,1.17,172,76
+A,1.49,190,76
+Dijkstra,11.13,391,76
+BestFS Euclidean,1.25,172,76
+A Euclidean,0.03,1,0
+BFS,2.3,87,52
+DFS,2.22,76,52
+BestFS,0.71,57,52
+A,1.01,77,52
+Dijkstra,5.58,172,52
+BestFS Euclidean,0.62,57,52
+A Euclidean,0.02,1,0
+BFS,3.6,136,76
+DFS,3.1,125,76
+BestFS,1.46,92,76
+A,1.47,129,76
+Dijkstra,9.33,271,76
+BestFS Euclidean,1.79,92,76
+A Euclidean,0.05,1,0
+BFS,5.64,194,65
+DFS,2.84,96,65
+BestFS,1.37,78,65
+A,2.28,193,65
+Dijkstra,11.97,387,65
+BestFS Euclidean,1.34,75,65
+A Euclidean,0.02,1,0
+BFS,0.74,21,9
+DFS,0.22,11,9
+BestFS,0.18,12,9
+A,0.4,11,9
+Dijkstra,1.29,39,9
+BestFS Euclidean,0.24,12,9
+A Euclidean,0.02,1,0
+BFS,1.33,44,30
+DFS,2.66,78,30
+BestFS,0.74,35,30
+A,0.65,40,30
+Dijkstra,2.94,90,30
+BestFS Euclidean,0.59,35,30
+A Euclidean,0.04,1,0
+BFS,1.15,29,14
+DFS,1.02,35,14
+BestFS,0.34,35,14
+A,0.33,23,14
+Dijkstra,1.98,59,14
+BestFS Euclidean,0.42,35,14
+A Euclidean,0.05,1,0
+BFS,0.14,4,3
+DFS,2.37,111,3
+BestFS,0.1,5,3
+A,0.08,4,3
+Dijkstra,0.34,10,3
+BestFS Euclidean,0.07,5,3
+A Euclidean,0.01,1,0
+BFS,4.22,139,118
+DFS,4.33,138,118
+BestFS,1.6,131,118
+A,1.72,138,118
+Dijkstra,8.41,277,118
+BestFS Euclidean,2.12,131,118
+A Euclidean,0.03,1,0
+BFS,2.29,72,53
+DFS,1.73,61,53
+BestFS,0.75,57,53
+A,1.3,70,53
+Dijkstra,4.61,146,53
+BestFS Euclidean,0.77,58,53
+A Euclidean,0.02,1,0
+BFS,1.89,82,27
+DFS,1.27,50,27
+BestFS,0.47,33,27
+A,0.6,65,27
+Dijkstra,4.6,165,27
+BestFS Euclidean,0.3,33,27
+A Euclidean,0.02,1,0
+BFS,1.82,64,26
+DFS,1.77,56,26
+BestFS,0.43,36,26
+A,0.42,36,26
+Dijkstra,4.3,128,26
+BestFS Euclidean,0.39,36,26
+A Euclidean,0.02,1,0
+BFS,2.99,101,47
+DFS,2.97,100,47
+BestFS,0.87,101,47
+A,0.88,99,47
+Dijkstra,6.79,201,47
+BestFS Euclidean,0.88,101,47
+A Euclidean,0.03,1,0
+BFS,3.6,139,55
+DFS,2.13,68,55
+BestFS,1.04,116,55
+A,1.1,114,55
+Dijkstra,8.62,279,55
+BestFS Euclidean,1.3,116,55
+A Euclidean,0.02,1,0
+BFS,0.07,2,2
+DFS,0.04,2,2
+BestFS,0.05,4,2
+A,0.05,2,2
+Dijkstra,0.22,6,2
+BestFS Euclidean,0.05,4,2
+A Euclidean,0.01,1,0
+BFS,1.84,70,21
+DFS,2.71,105,21
+BestFS,0.49,25,21
+A,0.52,34,21
+Dijkstra,4.42,141,21
+BestFS Euclidean,0.87,25,21
+A Euclidean,0.09,1,0
+BFS,4.92,160,92
+DFS,4.96,180,92
+BestFS,1.33,101,92
+A,1.44,148,92
+Dijkstra,9.44,321,92
+BestFS Euclidean,1.2,100,92
+A Euclidean,0.02,1,0
+BFS,3.31,120,60
+DFS,3.02,134,60
+BestFS,1.08,67,60
+A,1.4,102,60
+Dijkstra,7.03,242,60
+BestFS Euclidean,0.91,65,60
+A Euclidean,0.02,1,0
+BFS,2.22,86,59
+DFS,2.4,74,59
+BestFS,0.98,79,59
+A,1.13,86,59
+Dijkstra,5.31,171,59
+BestFS Euclidean,0.82,79,59
+A Euclidean,0.02,1,0
+BFS,2.26,78,45
+DFS,1.67,64,45
+BestFS,1.05,61,45
+A,0.9,67,45
+Dijkstra,4.51,156,45
+BestFS Euclidean,0.86,61,45
+A Euclidean,0.02,1,0
+BFS,2.41,92,39
+DFS,4.35,176,39
+BestFS,1.05,159,39
+A,0.72,81,39
+Dijkstra,6.85,185,39
+BestFS Euclidean,0.99,136,39
+A Euclidean,0.02,1,0
+BFS,1.92,51,46
+DFS,0.82,50,46
+BestFS,0.56,51,46
+A,0.67,51,46
+Dijkstra,3.4,100,46
+BestFS Euclidean,0.76,51,46
+A Euclidean,0.02,1,0
+BFS,4.91,177,97
+DFS,9.92,155,97
+BestFS,5.48,152,97
+A,5.23,177,97
+Dijkstra,15.11,353,97
+BestFS Euclidean,4.87,152,97
+A Euclidean,0.03,1,0
+BFS,2.77,37,18
+DFS,2.1,20,18
+BestFS,0.96,22,18
+A,1.19,24,18
+Dijkstra,2.72,72,18
+BestFS Euclidean,1.24,22,18
+A Euclidean,0.04,1,0
+BFS,12.98,170,106
+DFS,9.78,143,106
+BestFS,2.18,146,106
+A,2.6,165,106
+Dijkstra,10.3,342,106
+BestFS Euclidean,1.92,146,106
+A Euclidean,0.03,1,0
+BFS,0.57,21,12
+DFS,0.62,16,12
+BestFS,0.31,20,12
+A,0.27,20,12
+Dijkstra,1.54,41,12
+BestFS Euclidean,0.2,20,12
+A Euclidean,0.02,1,0
+BFS,3.62,148,96
+DFS,4.24,162,96
+BestFS,1.7,158,96
+A,1.42,142,96
+Dijkstra,9.07,298,96
+BestFS Euclidean,1.68,161,96
+A Euclidean,0.06,1,0
+BFS,4.61,160,95
+DFS,4.34,149,95
+BestFS,1.57,152,95
+A,2.0,160,95
+Dijkstra,10.17,319,95
+BestFS Euclidean,1.58,135,95
+A Euclidean,0.02,1,0
+BFS,3.46,121,55
+DFS,2.01,60,55
+BestFS,0.8,61,55
+A,1.09,105,55
+Dijkstra,7.71,240,55
+BestFS Euclidean,0.56,60,55
+A Euclidean,0.02,1,0
+BFS,0.1,3,2
+DFS,0.08,3,2
+BestFS,0.07,4,2
+A,0.07,3,2
+Dijkstra,0.23,4,2
+BestFS Euclidean,0.08,4,2
+A Euclidean,0.01,1,0
+BFS,4.41,172,68
+DFS,3.56,141,68
+BestFS,1.42,111,68
+A,1.55,147,68
+Dijkstra,9.99,344,68
+BestFS Euclidean,1.33,111,68
+A Euclidean,0.02,1,0
+BFS,2.57,115,37
+DFS,1.24,43,37
+BestFS,0.53,58,37
+A,0.58,82,37
+Dijkstra,6.47,227,37
+BestFS Euclidean,0.77,54,37
+A Euclidean,0.03,1,0
+BFS,3.51,104,75
+DFS,2.44,82,75
+BestFS,1.01,81,75
+A,1.34,101,75
+Dijkstra,6.44,207,75
+BestFS Euclidean,1.04,81,75
+A Euclidean,0.02,1,0
+BFS,3.86,194,103
+DFS,3.71,115,103
+BestFS,2.14,163,103
+A,2.07,194,103
+Dijkstra,11.16,387,103
+BestFS Euclidean,1.52,151,103
+A Euclidean,0.03,1,0
+BFS,3.69,126,78
+DFS,2.22,87,78
+BestFS,1.23,88,78
+A,1.31,112,78
+Dijkstra,7.71,251,78
+BestFS Euclidean,1.46,92,78
+A Euclidean,0.03,1,0
+BFS,2.18,87,36
+DFS,4.24,174,36
+BestFS,0.66,63,36
+A,0.96,66,36
+Dijkstra,5.82,179,36
+BestFS Euclidean,0.41,63,36
+A Euclidean,0.02,1,0
+BFS,5.23,171,129
+DFS,4.82,141,129
+BestFS,3.01,149,129
+A,2.29,157,129
+Dijkstra,10.78,340,129
+BestFS Euclidean,1.75,149,129
+A Euclidean,0.04,1,0
+BFS,3.8,135,59
+DFS,1.87,65,59
+BestFS,1.24,102,59
+A,1.29,129,59
+Dijkstra,7.37,269,59
+BestFS Euclidean,0.96,103,59
+A Euclidean,0.02,1,0
+BFS,4.95,175,108
+DFS,4.67,154,108
+BestFS,1.88,152,108
+A,3.65,170,108
+Dijkstra,10.12,348,108
+BestFS Euclidean,1.51,151,108
+A Euclidean,0.02,1,0
+BFS,3.28,119,51
+DFS,4.24,193,51
+BestFS,0.79,57,51
+A,0.91,107,51
+Dijkstra,6.92,239,51
+BestFS Euclidean,0.77,57,51
+A Euclidean,0.02,1,0
+BFS,2.04,80,28
+DFS,1.0,37,28
+BestFS,0.54,44,28
+A,0.57,49,28
+Dijkstra,4.9,164,28
+BestFS Euclidean,0.53,38,28
+A Euclidean,0.02,1,0
+BFS,0.33,54,22
+DFS,0.76,29,22
+BestFS,0.26,32,22
+A,0.39,32,22
+Dijkstra,3.19,106,22
+BestFS Euclidean,0.35,28,22
+A Euclidean,0.02,1,0
+BFS,4.71,178,92
+DFS,3.77,140,92
+BestFS,1.63,120,92
+A,1.46,167,92
+Dijkstra,10.09,358,92
+BestFS Euclidean,1.59,117,92
+A Euclidean,0.03,1,0
+BFS,0.14,5,3
+DFS,0.09,4,3
+BestFS,0.07,5,3
+A,0.08,4,3
+Dijkstra,0.31,8,3
+BestFS Euclidean,0.11,5,3
+A Euclidean,0.03,1,0
+BFS,4.41,174,82
+DFS,2.96,105,82
+BestFS,1.42,155,82
+A,1.42,154,82
+Dijkstra,9.81,347,82
+BestFS Euclidean,1.34,155,82
+A Euclidean,0.03,1,0
+BFS,2.28,76,43
+DFS,1.78,76,43
+BestFS,0.81,77,43
+A,0.88,76,43
+Dijkstra,4.36,151,43
+BestFS Euclidean,0.69,77,43
+A Euclidean,0.02,1,0
+BFS,4.06,160,64
+DFS,2.56,89,64
+BestFS,1.0,78,64
+A,1.43,138,64
+Dijkstra,9.13,320,64
+BestFS Euclidean,1.04,80,64
+A Euclidean,0.02,1,0
+BFS,0.73,27,18
+DFS,0.63,26,18
+BestFS,0.25,28,18
+A,0.28,27,18
+Dijkstra,1.71,53,18
+BestFS Euclidean,0.31,28,18
+A Euclidean,0.02,1,0
+BFS,0.54,24,13
+DFS,1.02,49,13
+BestFS,0.27,18,13
+A,0.36,18,13
+Dijkstra,1.51,50,13
+BestFS Euclidean,0.36,15,13
+A Euclidean,0.04,1,0
+BFS,0.84,32,20
+DFS,0.59,22,20
+BestFS,0.37,33,20
+A,0.35,32,20
+Dijkstra,1.87,63,20
+BestFS Euclidean,0.33,33,20
+A Euclidean,0.02,1,0

@@ -1,4 +1,5 @@
 import random
+import time
 from flask import Flask, send_file, render_template, abort, request, jsonify # type: ignore
 import os
 from maze import Maze
@@ -56,6 +57,10 @@ def search_algorithm(algorithm):
         node, steps, shortest = search.A(graph)
     elif algorithm == 'Dijkstra':
         node, steps, shortest = search.Dijkstra(graph)
+    elif algorithm == 'BestFSEuclidean':
+        node, steps, shortest = search.BestFS(graph, 'euclidean')
+    elif algorithm == 'AEuclidean':
+        node, steps, shortest = search.A(graph, 'euclidean')
     else:
         return jsonify({'status': 'failure', 'message': 'Unknown algorithm'}), 400
 
@@ -63,6 +68,60 @@ def search_algorithm(algorithm):
         return jsonify({'status': 'failure', 'steps': steps})
     else:
         return jsonify({'status': 'success', 'steps': steps, 'shortest': shortest})
+    
+@app.route('/run', methods=['POST'])
+def run():
+
+    csv = open('results5.csv', 'w')
+    csv.write('Algorithm,Time,Steps,Length\n')
+
+    for _ in range(100):
+        graph = Graph(size)
+        for row in graph.nodes:
+            for node in row:
+                node.open = False
+        graph = Maze(graph).generate()
+
+        startBFS = time.time()
+        _, stepsBFS, shortestBFS = search.BFS(graph)
+        endBFS = time.time()
+
+        startDFS = time.time()
+        _, stepsDFS, shortestDFS = search.DFS(graph)
+        endDFS = time.time()
+
+        startBestFS = time.time()
+        _, stepsBestFS, shortestBestFS = search.BestFS(graph)
+        endBestFS = time.time()
+
+        startA = time.time()
+        _, stepsA, shortestA = search.A(graph)
+        endA = time.time()
+
+        startDijkstra = time.time()
+        _, stepsDijkstra, shortestDijkstra = search.Dijkstra(graph)
+        endDijkstra = time.time()
+
+        startBestFSEuclidean = time.time()
+        _, stepsBestFSEuclidean, shortestBestFSEuclidean = search.BestFS(graph, 'euclidean')
+        endBestFSEuclidean = time.time()
+
+        startAEuclidean = time.time()
+        _, stepsAEuclidean, shortestAEuclidean = search.A(graph, 'euclidean')
+        endAEuclidean = time.time()
+
+        csv.write(f'BFS,{round((endBFS - startBFS) * 1000, 2)},{len(stepsBFS)},{len(shortestBFS)}\n')
+        csv.write(f'DFS,{round((endDFS - startDFS) * 1000, 2)},{len(stepsDFS)},{len(shortestDFS)}\n')
+        csv.write(f'BestFS,{round((endBestFS - startBestFS) * 1000, 2)},{len(stepsBestFS)},{len(shortestBestFS)}\n')
+        csv.write(f'A,{round((endA - startA) * 1000, 2)},{len(stepsA)},{len(shortestA)}\n')
+        csv.write(f'Dijkstra,{round((endDijkstra - startDijkstra) * 1000, 2)},{len(stepsDijkstra)},{len(shortestDijkstra)}\n')
+        csv.write(f'BestFS Euclidean,{round((endBestFSEuclidean - startBestFSEuclidean) * 1000, 2)},{len(stepsBestFSEuclidean)},{len(shortestBestFSEuclidean)}\n')
+        csv.write(f'A Euclidean,{round((endAEuclidean - startAEuclidean) * 1000, 2)},{len(stepsAEuclidean)},{len(shortestAEuclidean)}\n')
+
+    csv.close()
+    return jsonify({'status': 'success'})
+
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=1471)

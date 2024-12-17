@@ -59,8 +59,19 @@ class Maze:
             connect_y = (choice.y + cell.y) // 2
             connecting_node = self.graph.nodes[connect_x][connect_y]
             connecting_node.open = True
+
+        closed_positions = []
+        for x in range(self.graph.size):
+            for y in range(self.graph.size):
+                if not self.graph.nodes[x][y].open:
+                    closed_positions.append((x,y))
         
-        # Optional: create entrance and exit
+        num_to_open = min(10, len(closed_positions))
+        positions_to_open = random.sample(closed_positions, num_to_open)
+        
+        for x, y in positions_to_open:
+            self.graph.nodes[x][y].open = True
+        
         suggestedStart = random.choice(random.choice(self.graph.nodes))
         suggestedGoal = random.choice(random.choice(self.graph.nodes))
         while not suggestedStart.open:
