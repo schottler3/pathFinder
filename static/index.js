@@ -1,4 +1,4 @@
-const gridSize = 16;
+const gridSize = 20;
 let start;
 let algorithm = 'BFS';
 let goals = [];
@@ -18,6 +18,7 @@ let populateGrid = function() {
             cell.className = 'cell';
             cell.id = i + '-' + j;
             cell.state = 0;
+            cells.push(cell);
             cell.addEventListener('click', function(event) {
                 switch(cell.state){
                     case 0:
@@ -95,10 +96,31 @@ let displayPath = async function(steps) {
             cell.style.backgroundColor = 'darkred';
         }
         else
-            cell.style.backgroundColor = 'blue';
-        await sleep(50);
+            if(step.status == 'visited')
+                cell.style.backgroundColor = 'blue';
+            else if (step.status == 'updated')
+                cell.style.backgroundColor = 'yellow';
+        await sleep(10);
     }
 }
+
+let displayShortest = async function(steps) {
+    let sortedSteps = Object.keys(steps).sort((a, b) => a - b).map(key => steps[key]);
+
+    for (let step of sortedSteps) {
+        let cell = document.getElementById(step.node);
+        if(cell.state == 2){
+            cell.style.backgroundColor = 'darkgreen';
+        }
+        else if(cell.state == 3){
+            cell.style.backgroundColor = 'darkred';
+        }
+        else
+            cell.style.backgroundColor = 'aqua';
+        await sleep(10);
+    }
+}
+    
 
 let setAlgorithm = function(algo) {
     algorithm = algo;
@@ -118,12 +140,16 @@ let search = function() {
         case 'A':
             searchFetch('A');
             break;
+        case 'Dijkstra':
+            searchFetch('Dijkstra');
+            break;
     }
 }
 
 let searchFetch = async function(algorithm) {
     console.log(goals);
     console.log(start);
+    editing = false;
 
     let gridData = {
         start: start.id,
@@ -142,9 +168,67 @@ let searchFetch = async function(algorithm) {
     if(response.ok){
         let data = await response.json();
         console.log(data);
-        displayPath(data.steps);
-        editing = false;
+        await displayPath(data.steps);
+        if(data.shortest){
+            displayShortest(data.shortest);
+        }
+        editing = true;
     }
+}
+
+let setGrid = async function() {
+    clearGrid();
+    response = await fetch(`/generate`, {
+        method: 'GET',
+    })
+
+    if(response.ok){
+        console.log('Grid set');
+        let data = await response.json();
+        console.log(data);
+        if(data.maze && data.maze.nodes){
+            // Iterate through the nodes array
+            data.maze.nodes.forEach(row => {
+                row.forEach(node => {
+                    let cell = document.getElementById(node.id);
+                    if(cell) {
+                        if(!node.open) {
+                            cell.style.backgroundColor = 'black';
+                            cell.state = 1;
+                            blocks.push(cell.id);
+                        }
+                        else {
+                            cell.style.backgroundColor = 'white';
+                            cell.state = 0;
+                        }
+                }
+            });
+        });
+        let GenStart = document.getElementById(data.maze.start.id);
+        GenStart.style.backgroundColor = 'red';
+        GenStart.state = 3;
+        start = GenStart;
+        goals = [];
+        for(let goal of data.maze.goals){
+            let cell = document.getElementById(goal.id);
+            cell.style.backgroundColor = 'green';
+            cell.state = 2;
+            goals.push(cell);
+        }
+    } else {
+        console.log('No maze data');
+    }
+  }
+}
+
+let clearGrid = function() {
+    for(let cell of cells){
+        cell.style.backgroundColor = 'white';
+        cell.state = 0;
+    }
+    blocks = [];
+    goals = [];
+    start = null;
 }
 
 
